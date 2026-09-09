@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../auth/auth_controller.dart';
+import '../auth/user_role.dart';
 import '../l10n/locale_controller.dart';
 import '../screens/profile_screen.dart';
 import '../theme/app_theme.dart';
@@ -18,6 +20,17 @@ class AppDrawer extends StatelessWidget {
   final VoidCallback onGoHome;
 
   const AppDrawer({super.key, required this.onGoHome});
+
+  String _planLabel(UserRole role) {
+    switch (role) {
+      case UserRole.admin:
+        return tr('profile_admin');
+      case UserRole.vip:
+        return tr('profile_planVip');
+      case UserRole.free:
+        return tr('drawer_freeUser');
+    }
+  }
 
   void _comingSoon(BuildContext context, String label) {
     Navigator.of(context).pop();
@@ -63,9 +76,12 @@ class AppDrawer extends StatelessWidget {
                     children: [
                       Text('NOXE Pronos', style: AppTextStyles.leagueName.copyWith(fontSize: 16)),
                       const SizedBox(height: 3),
-                      Text(
-                        tr('drawer_freeUser'),
-                        style: AppTextStyles.chip.copyWith(color: AppColors.textGrey),
+                      ListenableBuilder(
+                        listenable: authController,
+                        builder: (context, _) => Text(
+                          _planLabel(authController.role),
+                          style: AppTextStyles.chip.copyWith(color: AppColors.textGrey),
+                        ),
                       ),
                     ],
                   ),

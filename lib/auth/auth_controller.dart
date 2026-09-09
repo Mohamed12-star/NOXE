@@ -41,7 +41,12 @@ class AuthController extends ChangeNotifier {
       notifyListeners();
       return;
     }
-    _role = await userRepository.ensureUserDocument(user);
+    final role = await userRepository.ensureUserDocument(user);
+    // Guard against a stale resolution: if the user changed again while this
+    // was in flight, an older call could otherwise overwrite the role for
+    // whoever is signed in now.
+    if (_currentUser?.uid != user.uid) return;
+    _role = role;
     notifyListeners();
   }
 

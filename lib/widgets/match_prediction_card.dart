@@ -86,8 +86,8 @@ class _StatusChip extends StatelessWidget {
         color = AppColors.success;
         break;
       case MatchResultStatus.loss:
-        icon = Icons.check_rounded;
-        color = AppColors.success;
+        icon = Icons.close_rounded;
+        color = AppColors.fail;
         break;
       case MatchResultStatus.pending:
         icon = Icons.access_time_rounded;

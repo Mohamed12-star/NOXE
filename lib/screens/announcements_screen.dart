@@ -32,6 +32,12 @@ class _AnnouncementsScreenState extends State<AnnouncementsScreen> {
   }
 
   @override
+  void dispose() {
+    _repository.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: SocialFeedColors.background,
