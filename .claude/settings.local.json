@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(firebase --version)",
+      "Bash(dart pub *)",
+      "PowerShell(winget install OpenJS.NodeJS.LTS --silent --accept-package-agreements --accept-source-agreements)",
+      "PowerShell(dart pub global activate flutterfire_cli 2>&1)",
+      "Bash(ls -la \"/c/Program Files/nodejs\" 2>&1 | head -5)",
+      "Read(//c/Program Files/nodejs/**)",
+      "Bash(ls -la \"/c/Users/Mr Nikiéma/AppData/Local/Pub/Cache/bin\" 2>&1)",
+      "Read(//c/Users/Mr Nikiéma/AppData/Local/Pub/Cache/bin/**)"
+    ]
+  }
+}

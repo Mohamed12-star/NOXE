@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "84206729969",
+    "project_id": "noxe-pronos",
+    "storage_bucket": "noxe-pronos.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84206729969:android:b56a1f51946730893a4750",
+        "android_client_info": {
+          "package_name": "com.example.noxe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "84206729969-0iaf9fte8jgb71bg85iv1nalob8h81tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVMqEGnpwgovnqmrPsJDpYsQBq27CAHag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "84206729969-0iaf9fte8jgb71bg85iv1nalob8h81tc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
